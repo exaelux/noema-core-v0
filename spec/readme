@@ -1,0 +1,64 @@
+# Noema — Technical Specification (v0.1)
+
+This directory contains the **technical specification** of Noema Core.
+
+The specification defines the semantic invariants, design constraints, and non-goals that any Noema-compliant implementation must respect. It focuses on **what Noema means**, not on how it is implemented.
+
+The scope is intentionally minimal to preserve neutrality, extensibility, and long-term stability.
+
+---
+
+## Scope of the Specification
+
+This specification covers:
+
+- The definition of a *Noema Semantic Object*
+- The strict separation between **existence**, **meaning**, and **content**
+- The guarantees provided by the Noema Core
+- The boundaries between the Core, Reference Profiles, and external systems
+
+This specification explicitly does **not** define:
+
+- Execution logic or workflows
+- Permission or access-control systems
+- Consent management mechanisms
+- Legal enforcement or regulatory interpretation
+- Domain-specific ontologies or business logic
+
+---
+
+## Normative vs Non-Normative Components
+
+The Noema ecosystem distinguishes clearly between **normative** and **non-normative** elements.
+
+### Normative
+
+The following components are considered normative for Noema v0.1:
+
+- The Noema Core semantic model
+- The definition of a Noema Semantic Object
+- The guarantees of neutrality, minimalism, and determinism
+- The Core output structure as formalized in `/schemas`
+
+Any compliant implementation must preserve these properties.
+
+### Non-Normative
+
+The following components are explicitly non-normative:
+
+- Reference Semantic Profiles
+- Example objects and use cases
+- Domain-specific interpretations
+- Tooling, validation scripts, or SDKs
+
+These components may evolve or be replaced without affecting Core compliance.
+
+---
+
+## Semantic Guarantees
+
+Noema Core provides the following guarantees:
+
+- **Neutrality**: semantic readings describe states, never judgments
+- **Minimalism**: only the minimum semantic information required for operability is exposed
+- **Determinism**: identical
