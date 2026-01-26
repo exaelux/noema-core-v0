@@ -1,0 +1,7 @@
+{
+  "noema_version": "0.1",
+  "object_id": "urn:noema:example:core-minimal",
+  "existence": true,
+  "meaning": "opaque-semantic-descriptor",
+  "visibility_abstract": "restricted"
+}
