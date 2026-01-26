@@ -189,4 +189,4 @@ See [`examples/`](examples/) for practical Noema use cases.
 
 ## License
 
-To be defined 
+MIT
