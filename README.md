@@ -1,127 +1,167 @@
-# noema-core-v0
-A semantic core for structuring meaning, visibility, and consent in tokenized data systems built on Move.
-
 # Noema Core
 
-## Overview
+**Noema** is a minimal, neutral, and universal semantic standard for interpreting tokenized objects across blockchain systems (assets, identities, rights, certificates, etc.).
 
-Noema Core is an experimental **semantic core** designed to structure, interpret, and control the visibility of tokenized data through **layered disclosure** models. It focuses on meaning, consent, and interpretability rather than storage or transport, and is built to be implemented on **Move-based environments**.
+Its sole function is to translate **verifiable on-chain facts** into **operational semantic readings** that are legible to humans and machines, without executing logic, enforcing policy, or embedding value judgments.
 
-Noema does not aim to be an application or a full protocol. It defines a **semantic standard** that other systems can adopt to make tokenized assets and identities readable, privacy-preserving, and context-aware.
-
----
-
-## Problem Statement
-
-Current tokenized systems excel at ownership and transfer, but struggle with:
-
-* Semantic ambiguity (data exists, but meaning is unclear)
-* Overexposure of sensitive information
-* Binary visibility (public vs private) with no nuance
-* Lack of consent-aware interpretation
-
-Noema addresses these gaps by introducing a semantic layer that separates **existence**, **meaning**, and **content**, and governs how information is revealed.
+* **Version:** v0.1 (Core Pure) + v0.1 (Reference Profile)
+* **Status:** Experimental / Conceptual
+* **Design orientation:** Move-compatible, chain-agnostic
 
 ---
 
-## Core Principles
+## Core Philosophy
 
-### 1. Layered Disclosure
+> Noema is not a protocol that *does* things.
+> Noema is a common language to *understand* what protocols already do.
 
-Information is revealed in layers, depending on context, consent, and authority. Disclosure is not binary.
+* Data without meaning is incomplete.
+* Meaning without privacy is dangerous.
+* Privacy without interoperability is ineffective.
 
-### 2. Privacy by Default
-
-All data is private unless explicitly revealed through a defined semantic rule.
-
-### 3. Interpretability
-
-Tokenized data should be readable and meaningful to humans and systems, not just verifiable.
-
-### 4. Neutrality
-
-Noema does not encode moral, political, or cultural assumptions. It is semantically neutral.
+Noema addresses this by enforcing a strict separation between **existence**, **meaning**, and **content**, enabling deterministic and privacy-preserving semantic interpretation.
 
 ---
 
-## Conceptual Model
+## Noema Core Pure v0.1
 
-Noema separates data into three semantic domains:
+The **Core Pure** is the irreducible semantic nucleus of Noema. It is intentionally minimal, neutral, and non-normative. Nothing may be removed without breaking universality; nothing may be added without introducing bias.
 
-* **Existence**: The fact that something exists (verifiable, minimal).
-* **Meaning**: What that thing represents (semantic interpretation).
-* **Content**: The underlying data itself (potentially sensitive).
+### Core Principles
 
-Access to each domain is governed independently.
-
----
-
-## Layered Disclosure Model
-
-A Noema-compliant system may expose:
-
-* Public semantic signals (non-sensitive)
-* Conditional semantic layers (consent-based)
-* Restricted content layers (legal or device-bound)
-
-This enables use cases such as:
-
-* Selective disclosure of credentials
-* Consent-aware identity proofs
-* Interpretable digital twins
-* Regulated asset representation
+1. **Neutrality** — describes states, never judgments.
+2. **Radical minimalism** — only what is strictly necessary.
+3. **Determinism** — identical inputs yield identical readings.
+4. **Strict separation** — existence ≠ meaning ≠ content.
+5. **Extensibility** — all domain logic lives outside the core.
+6. **Safe readability** — sufficient to operate, insufficient to exploit.
 
 ---
 
-## Scope of This Repository
+### Core Semantic Structure
 
-This repository contains:
+A Noema Semantic Object is any tokenized object that is addressable and verifiable on-chain.
 
-* The **Noema Core specification (v0.1)**
-* Conceptual models and diagrams (textual)
-* Reference structures for Move-based implementations
-* Realistic example scenarios
+The Core requires only three abstract components:
 
-This repository does **not** include:
+* **existence**
+  Implicit confirmation that the object exists and is referenceable on-chain.
 
-* A full blockchain implementation
-* UI components
-* Network or consensus logic
+* **meaning**
+  An opaque semantic descriptor derived exclusively from declared states or verifiable proofs. The Core imposes no structure, taxonomy, or ontology.
+
+* **visibility_abstract**
+  A non-normative semantic hint describing general visibility conditions (e.g. public, restricted). This is *not* access control and has no fixed enumeration.
+
+```json
+{
+  "existence": true,
+  "meaning": "opaque-semantic-descriptor",
+  "visibility_abstract": "restricted"
+}
+```
+
+---
+
+### Core Privacy Principle
+
+**Noema reads proofs and declared states, not raw or sensitive data.**
+
+* No personal or confidential data is accessed.
+* Only verifiable outcomes are interpreted (e.g. valid / invalid, active / revoked).
+* Native compatibility with zero-knowledge proofs, selective disclosure, verifiable credentials, and oracles.
+
+---
+
+### What Noema Core Explicitly Does *Not* Do
+
+* Execute logic or workflows
+* Custody keys or assets
+* Enforce permissions or access control
+* Decide legality, trust, or compliance
+* Replace existing identity, privacy, or execution standards
+
+---
+
+## Noema Reference Semantic Profile v0.1 (Non‑Normative)
+
+The **Reference Semantic Profile** is an optional, non-normative extension that provides a commonly useful ontology for practical interoperability. It does not modify the Core and may be replaced or ignored entirely.
+
+### Recommended Semantic Fields (extensions of `meaning`)
+
+* `object_type` — high-level classification (e.g. Physical Good, Identity, Certificate)
+* `semantic_state` — current operational semantic state (e.g. Verified, Restricted, Expired)
+* `functional_role` — primary role in context (e.g. Proof, Access, Ownership)
+* `validity_status` — declared acceptability (e.g. Valid, Conditional)
+* `operability` — current usability (e.g. Usable, Limited)
+
+### Optional Derived Evaluation (External)
+
+Evaluative signals such as trust or risk **never belong to the Core**. When used, they are always contextual, model-dependent, and externally derived.
+
+```json
+"trust": {
+  "level": "High",
+  "model": "reference_trust_v1",
+  "derived_from": "issuer_reputation + proof_consistency"
+}
+```
+
+---
+
+### Example (Core + Reference Profile)
+
+```json
+{
+  "noema_version": "0.1",
+  "object_id": "urn:noema:asset:abcdef123456",
+  "existence": true,
+  "meaning": {
+    "object_type": "Identity",
+    "semantic_state": "Verified",
+    "functional_role": "Access",
+    "validity_status": "Valid",
+    "operability": "Usable"
+  },
+  "visibility_abstract": "public",
+  "derived_from": "VC + ZK-proof"
+}
+```
+
+---
+
+## Relationship to Existing Standards
+
+Noema does not implement or replace existing standards. It operates strictly as a **semantic interpretation layer** over their declared outputs.
+
+Compatible sources include:
+
+* DID / Verifiable Credentials
+* Zero-Knowledge proof systems
+* Privacy-preserving pools and shields
+* Oracles and verifiable external data
+* Sector-specific certifications
+
+Noema consumes **outcomes**, not internal data or private content.
+
+---
+
+## Repository Structure
+
+* `README.md` — conceptual overview
+* `spec/move-mapping.md` — conceptual Move mapping (non‑normative)
+* `spec/reference-model.md` — reference semantic profile and layers
 
 ---
 
 ## Status
 
-* Version: **v0.1 (conceptual / pre-implementation)**
-* Stability: **Experimental**
-* Target audience: protocol designers, researchers, and Move developers
-
----
-
-## Roadmap (High Level)
-
-* [ ] Formalize Noema Core spec v0.2
-* [ ] Define Move-compatible data structures
-* [ ] Implement minimal on-chain semantic objects
-* [ ] Add example: sensitive credential with layered disclosure
-* [ ] Draft interoperability notes
-
----
-
-## Philosophy
-
-Noema is built on the assumption that **data without meaning is incomplete**, and **meaning without consent is dangerous**.
-
-The goal is not maximal transparency, but **functional transparency**.
-
----
-
-## Disclaimer
-
-This project is experimental and exploratory. It is not a production-ready standard and should be treated as a research and prototyping effort.
+* Version: v0.1
+* Stability: experimental
+* Next steps: conceptual validation, minimal JSON schemas, domain-specific profiles
 
 ---
 
 ## License
 
-To be defined.
+To be defined 
