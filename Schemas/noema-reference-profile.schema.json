@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/exaelux/noema-core-v0/schemas/noema-reference-profile.schema.json",
+  "title": "Noema Reference Semantic Profile v0.1",
+  "description": "Optional common ontology for practical interoperability (non-normative)",
+  "type": "object",
+  "properties": {
+    "object_type": {
+      "type": "string",
+      "description": "High-level classification (e.g. Physical Good, Identity, Certificate)"
+    },
+    "semantic_state": {
+      "type": "string",
+      "description": "Current operational semantic state (e.g. Verified, Operational, Expired)"
+    },
+    "functional_role": {
+      "type": "string",
+      "description": "Primary role in context (e.g. Proof, Access, Ownership)"
+    },
+    "validity_status": {
+      "type": "string",
+      "description": "Declared acceptability (e.g. Valid, Conditional)"
+    },
+    "operability": {
+      "type": "string",
+      "description": "Current usability (e.g. Usable, Limited)"
+    },
+    "trust": {
+      "type": "object",
+      "description": "Optional derived evaluation (always contextual and model-dependent; never part of Core)",
+      "properties": {
+        "level": {
+          "type": "string",
+          "description": "Model-defined trust level (no universal scale assumed)"
+        },
+        "model": {
+          "type": "string"
+        },
+        "derived_from": {
+          "type": ["string", "array"],
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["level"]
+    }
+  },
+  "additionalProperties": true
+}
