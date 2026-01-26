@@ -170,6 +170,8 @@ The following examples illustrate Noema Core readings at different levels:
 ### Health / Travel — Privacy-Preserving Compliance
 - [`examples/health-travel-exemption.json`](examples/health-travel-exemption.json)
 
+See [`examples/`](examples/) for practical Noema use cases.
+
 
 ## Status
 
