@@ -154,6 +154,20 @@ Noema consumes **outcomes**, not internal data or private content.
 
 ---
 
+## Examples
+
+The following examples illustrate Noema Core readings at different levels:
+
+### Core Pure (minimal)
+- [`examples/core-minimal.json`](examples/core-minimal.json)
+
+### Identity / Credential
+- [`examples/identity-certificate.json`](examples/identity-certificate.json)
+
+### Asset / Supply Chain
+- [`examples/asset-supply-chain.json`](examples/asset-supply-chain.json)
+
+
 ## Status
 
 * Version: v0.1
