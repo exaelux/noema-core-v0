@@ -167,6 +167,9 @@ The following examples illustrate Noema Core readings at different levels:
 ### Asset / Supply Chain
 - [`examples/asset-supply-chain.json`](examples/asset-supply-chain.json)
 
+### Health / Travel — Privacy-Preserving Compliance
+- [`examples/health-travel-exemption.json`](examples/health-travel-exemption.json)
+
 
 ## Status
 
