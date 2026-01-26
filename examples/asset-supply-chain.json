@@ -1,0 +1,17 @@
+{
+  "noema_version": "0.1",
+  "object_id": "urn:noema:asset:batch-7890",
+  "existence": true,
+  "meaning": {
+    "object_type": "Physical Good",
+    "semantic_state": "Operational",
+    "functional_role": "Representation",
+    "validity_status": "Valid",
+    "operability": "Usable"
+  },
+  "visibility_abstract": "authorized",
+  "derived_from": [
+    "GS1:lot:7890",
+    "oracle:shipment-proof:abc999"
+  ]
+}
