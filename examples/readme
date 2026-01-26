@@ -1,1 +1,72 @@
+# Noema — Examples
+
+This directory contains **practical, minimal examples** illustrating how Noema Core can be applied to real-world scenarios while preserving privacy by design.
+
+Each example represents a **single Noema semantic object**. The object itself does not change; what changes is **how it can be read and interpreted** depending on context, role, and authorization.
+
+No example exposes sensitive or personal data.
+
+---
+
+## 1. Core Minimal — Semantic Core Only
+
+**File:** `core-minimal.json`
+
+This example represents the **absolute minimum Noema Core output**.
+
+It confirms that a tokenized object exists and is readable on-chain, provides an opaque semantic meaning, and declares abstract visibility. No domain logic, evaluation, or sensitive data is included.
+
+This demonstrates Noema’s **radical minimalism**: the core can function with only existence, meaning, and visibility, while remaining universally extensible.
+
+---
+
+## 2. Identity / Credential — Operational Proof
+
+**File:** `identity-certificate.json`
+
+This example shows how Noema interprets a **digital identity or credential** without exposing personal data.
+
+The object is semantically understood as a certificate that is verified, valid, and usable as proof. Systems can rely on its operational meaning (e.g. access or eligibility) without learning anything about the holder’s identity details.
+
+This illustrates how Noema supports **identity-based use cases with privacy by design**.
+
+---
+
+## 3. Asset / Supply Chain — Representational Semantics
+
+**File:** `asset-supply-chain.json`
+
+This example represents a **physical or digital asset** in a supply chain context.
+
+The object is operational, valid, and usable as a representation of a good or batch, while external references provide traceability. No proprietary, commercial, or sensitive data is exposed.
+
+It demonstrates how Noema can be applied beyond identity, enabling **semantic interoperability for assets and logistics** without leaking underlying data.
+
+---
+
+## 4. Health / Travel — Privacy-Preserving Compliance
+
+**File:** `health-travel-exemption.json`
+
+This example demonstrates how Noema can be used in **highly sensitive and regulated domains**, such as health and international travel.
+
+The semantic reading confirms that a valid and usable certificate exists and can be used as proof for travel compliance. Crucially, no medical condition, diagnosis, or personal health data is revealed.
+
+Public systems can verify **operational sufficiency**, while deeper interpretation is possible only through external authorization or legal mechanisms. This illustrates Noema’s **layered semantic model**, where privacy is preserved by default and meaning is revealed only when justified.
+
+---
+
+## Key Principle Illustrated
+
+> **Noema does not reveal more data. It reveals more meaning — only when justified.**
+
+This layered approach allows the same semantic object to support operability, privacy, and regulation simultaneously.
+
+---
+
+## Notes
+
+* All examples conform to the Noema Core v0.1 schema
+* Reference Profile fields are optional and non-normative
+* Implementations are free to define additional domain-specific profiles
 
