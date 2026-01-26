@@ -172,6 +172,11 @@ The following examples illustrate Noema Core readings at different levels:
 
 See [`examples/`](examples/) for practical Noema use cases.
 
+## Schemas & Validation
+
+- [`schemas/noema-core-pure.schema.json`](schemas/noema-core-pure.schema.json)
+- [`schemas/noema-reference-profile.schema.json`](schemas/noema-reference-profile.schema.json)
+
 
 ## Status
 
