@@ -158,7 +158,6 @@ Noema consumes **outcomes**, not internal data or private content.
 
 * Version: v0.1
 * Stability: experimental
-* Next steps: conceptual validation, minimal JSON schemas, domain-specific profiles
 
 ---
 
