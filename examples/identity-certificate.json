@@ -1,0 +1,17 @@
+{
+  "noema_version": "0.1",
+  "object_id": "urn:noema:identity:abcdef123456",
+  "existence": true,
+  "meaning": {
+    "object_type": "Certificate",
+    "semantic_state": "Verified",
+    "functional_role": "Access",
+    "validity_status": "Valid",
+    "operability": "Usable"
+  },
+  "visibility_abstract": "public",
+  "derived_from": [
+    "VC:did:example:xyz123",
+    "ZK-proof:hash456"
+  ]
+}
