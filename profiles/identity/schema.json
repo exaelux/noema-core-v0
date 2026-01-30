@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Noema Identity Profile v0.1",
+  "description": "Non-normative semantic extensions for identity-related use cases",
+  "type": "object",
+  "properties": {
+    "credential_type": {
+      "type": "string",
+      "description": "Type of identity credential (e.g. access, eligibility, attestation)"
+    },
+    "subject_role": {
+      "type": "string",
+      "description": "Role of the subject (e.g. holder, member, student)"
+    },
+    "eligibility_status": {
+      "type": "string",
+      "description": "Operational eligibility state (e.g. eligible, not_eligible)"
+    },
+    "intended_use": {
+      "type": "string",
+      "description": "Context in which the credential is intended to be used"
+    }
+  },
+  "additionalProperties": true
+}
