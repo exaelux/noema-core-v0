@@ -1,0 +1,15 @@
+{
+  "noema_version": "0.1",
+  "object_id": "urn:noema:identity:access:002",
+  "existence": true,
+  "meaning": {
+    "credential_type": "access",
+    "subject_role": "student",
+    "eligibility_status": "eligible",
+    "intended_use": "restricted_area_entry"
+  },
+  "visibility_abstract": "public",
+  "derived_from": [
+    "VC:institution:hash456"
+  ]
+}
