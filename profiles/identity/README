@@ -1,0 +1,56 @@
+# Noema — Identity Profile (v0.1)
+
+This document defines the **Identity Domain Profile** for Noema.
+
+The profile provides a common semantic interpretation for identity-related objects such as credentials, attestations, and eligibility proofs, without modifying the Noema Core.
+
+This profile is **non-normative** and optional.
+
+---
+
+## Scope
+
+This profile applies to:
+
+- Digital credentials
+- Eligibility proofs
+- Access-related attestations
+- Identity-linked claims
+
+It does **not** define:
+
+- Identity standards (DID, VC, etc.)
+- Legal identity
+- Authentication or authorization logic
+- Data storage or disclosure mechanisms
+
+---
+
+## Semantic Extensions
+
+The Identity Profile interprets the `meaning` field of a Noema Core object using the following semantic concepts:
+
+- `credential_type`
+- `subject_role`
+- `eligibility_status`
+- `intended_use`
+
+These fields are **interpretive**, not mandatory.
+
+---
+
+## Privacy Model
+
+- No personal data is required
+- No identifiers are exposed
+- Only operational meaning is expressed
+- Deeper interpretation requires external authorization
+
+---
+
+## Relationship to Noema Core
+
+- The Core remains unchanged
+- This profile exists entirely within `meaning`
+- Compliance with the Core schema is mandatory
+- Compliance with this profile is optional
