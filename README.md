@@ -177,6 +177,11 @@ See [`examples/`](examples/) for practical Noema use cases.
 - [`Schemas/noema-core-pure.schema.json`](Schemas/noema-core-pure.schema.json)
 - [`Schemas/noema-reference-profile.schema.json`](Schemas/noema-reference-profile.schema.json)
 
+## Documentation
+
+- [Foundational Document (EN)](docs/Noema_Foundational_Document_v0.1_EN.pdf)
+- [Documento Fundacional (ES)](docs/Documento_Fundacional_Noema_v0.1_ES.pdf)
+
 
 
 
